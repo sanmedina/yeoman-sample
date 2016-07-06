@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="store">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="StoreController as store">
+  <div class="container">
+    <!-- Single product example -->
+      <!-- <div ng-hide="store.product.soldOut">
+      <h1>{{store.product.name}}</h1>
+      <h2>{{store.product.price}}</h2>
+      <p>{{store.product.description}}</p>
+      <button ng-show="store.product.canPurchase">Add to cart</button>
+    </div> -->
+
+    <!-- Multiple products exmaple -->
+    <div ng-controller="StoreController as store">
+      <div ng-repeat="product in store.products">
+        <!-- Name -->
+        <h1>{{product.name}}</h1>
+        <!-- Price -->
+        <h2>{{product.price | currency}}</h2>
+        <!-- Details -->
+
+        <!-- Whitout controller -->
+        <!-- <section ng-init="tab = 1"> -->
+        <div class="row">
+          <div class="col-md-12">
+            <product-panels></product-panels>
+          </div>
+        </div>
+        <!-- Button -->
+        <button ng-show="product.canPurchase">Add to cart</button>
+      </div>
+    </div>
+  <!-- Container end -->
+  </div>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="product.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "angular-tutorial",
+  "authors": [
+    "Santiago Medina <devsanlizmed@yahoo.com>"
+  ],
+  "description": "CodeSchool course",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="store">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body ng-controller="StoreController as store">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Expressions -->
+        <p>I am {{4 + 6}}</p>
+        <p>{{ "hello" + " world!" }}</p>
+
+        <!-- Filters -->
+        <p>{{'1388123412323' | date:'MM/dd/yyyy @ h:mma'}}</p>
+        <p>{{'octagon gem' | uppercase}}</p>
+        <p>{{'My Description' | limitTo:8}}</p>
+        <h3>Normal</h3>
+          <li ng-repeat="product in store.products | limitTo:3">
+            <h5 product-title-a></h5>
+          </li>
+        <h3>Limit to 3</h3>
+        <li ng-repeat="product in store.products | limitTo:3">
+          <h5 ng-include="'product-title.html'"></h5>
+        </li>
+        <h3>Price order</h3>
+        <li ng-repeat="product in store.products | orderBy:'-price'">
+          <h5><product-title></product-title></h5>
+        </li>
+
+        <!-- Image source -->
+        <img ng-src="{{store.product.images[0].full}}" alt="hello">
+
+        <!-- Binding -->
+        <input ng-model="review.terms" type="checkbox">
+        <input ng-model="review.color" type="radio" value="red">
+        <input ng-model="review.color" type="radio" value="blue">
+        <input ng-model="review.color" type="radio" value="green">
+      </div>
+    </div>
+  </div>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="product.js"></script>
+</body>
+</html>

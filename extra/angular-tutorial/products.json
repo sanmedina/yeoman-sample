@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Dodecahedron",
+    "price": 2.95,
+    "description": "Some number of angules",
+    "canPurchase": true,
+    "reviews": [
+      {
+        "stars": 5,
+        "body": "I love this product <3",
+        "author": "joe@thomas.com"
+      },
+      {
+        "stars": 1,
+        "body": "This product sucks",
+        "author": "tim@hater.com"
+      }
+    ]
+  },
+  {
+    "name": "Pentagonal Gem",
+    "price": 5.95,
+    "description": "Five angles",
+    "canPurchase": false,
+    "reviews": [
+      {
+        "stars": 3,
+        "body": "It's ok",
+        "author": "doe@tim.com"
+      },
+      {
+        "stars": 1,
+        "body": "This product sucks",
+        "author": "tim@hater.com"
+      }
+    ]
+  }
+]
